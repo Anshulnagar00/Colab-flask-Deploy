@@ -9,15 +9,18 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
     <script>
   // Your web app's Firebase configuration
+ 
   var firebaseConfig = {
-    apiKey: ,  <!-- Fill Your's project Information -->
-    authDomain: ,
-    databaseURL: ,
-    projectId: ,
-    storageBucket: ,
-    messagi,
-    measurementId: 
+  apiKey: "api-key",
+  authDomain: "project-id.firebaseapp.com",
+  databaseURL: "https://project-id.firebaseio.com",
+  projectId: "project-id",
+  storageBucket: "project-id.appspot.com",
+  messagingSenderId: "sender-id",
+  appId: "app-id",
+  measurementId: "G-measurement-id",
   };
+      
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();

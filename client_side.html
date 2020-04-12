@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>faceapp</title>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+    <script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyC0fIYbX2jfQVjHSQ7tAkb20myZDlHG13Q",
+    authDomain: "faceapp-6f76c.firebaseapp.com",
+    databaseURL: "https://faceapp-6f76c.firebaseio.com",
+    projectId: "faceapp-6f76c",
+    storageBucket: "faceapp-6f76c.appspot.com",
+    messagingSenderId: "544864276073",
+    appId: "1:544864276073:web:4d5a9580171e2dd5b25cf8",
+    measurementId: "G-ZC005MSR3Y"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+
+    var datashot = ''
+    var linktoapp = database.ref("FaceApp-ML-Model-Urls");
+    linktoapp.on('value', function(snapshot) {
+        datashot= snapshot.val()["url"];
+        document.getElementById('box').setAttribute("href",datashot);
+        location.replace(datashot)
+    });
+    
+    </script>
+
+  </head>
+  <body>
+      <h1><a id="box">if not redirect click here to Proceed to App</a></h1>
+
+  </body>
+
+<html>
